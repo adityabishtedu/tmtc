@@ -39,7 +39,15 @@ const itineraryValidation = [
     .withMessage("Activity location is required"),
 ];
 
-// Protected routes (require authentication)
+// PUBLIC ROUTES (no authentication required)
+// Get shared itinerary (public access)
+router.get(
+  "/share/:shareableId",
+  cache(300),
+  itineraryController.getSharedItinerary
+);
+
+// PROTECTED ROUTES (require authentication)
 router.use(auth);
 
 // Create itinerary
