@@ -1,0 +1,53 @@
+{
+  "name": "travel-itinerary-api",
+  "version": "1.0.0",
+  "description": "A RESTful API for managing travel itineraries with authentication and caching",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon start-dev.js",
+    "dev:basic": "nodemon src/server.js",
+    "dev:with-env": "node start-dev.js",
+    "dev:demo": "node start-dev-no-db.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "travel",
+    "itinerary",
+    "api",
+    "nodejs",
+    "express",
+    "mongodb",
+    "jwt",
+    "redis"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "redis": "^4.6.8",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "express-validator": "^7.0.1",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0",
+    "nodemailer": "^6.9.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1",
+    "@types/jest": "^29.5.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
